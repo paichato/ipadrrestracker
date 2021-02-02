@@ -24,7 +24,7 @@ html, body, #root{
     font-family:'Rubik', sans-serif;
 }
 html{
-    background:blue;
+    background:var(--white);
 } 
 
 #root{
