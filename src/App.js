@@ -12,7 +12,7 @@ const [vis,setvis]=useState(false);
 
   return (
     <>
-    <BrowserRouter basename="/ipaddresstracker">
+    <BrowserRouter basename="/ipadrrestracker">
       <Route path="/" exact>
         <Homepage ip={ip} setip={setip} setvis={setvis} vis={vis} />
       </Route>
