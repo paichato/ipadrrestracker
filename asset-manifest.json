@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/ipaddresstracker/static/js/main.33749084.chunk.js",
-    "main.js.map": "/ipaddresstracker/static/js/main.33749084.chunk.js.map",
-    "runtime-main.js": "/ipaddresstracker/static/js/runtime-main.4660a214.js",
-    "runtime-main.js.map": "/ipaddresstracker/static/js/runtime-main.4660a214.js.map",
-    "static/js/2.a45d6761.chunk.js": "/ipaddresstracker/static/js/2.a45d6761.chunk.js",
-    "static/js/2.a45d6761.chunk.js.map": "/ipaddresstracker/static/js/2.a45d6761.chunk.js.map",
-    "index.html": "/ipaddresstracker/index.html",
-    "static/js/2.a45d6761.chunk.js.LICENSE.txt": "/ipaddresstracker/static/js/2.a45d6761.chunk.js.LICENSE.txt",
-    "static/media/pattern-bg.a60a3c85.png": "/ipaddresstracker/static/media/pattern-bg.a60a3c85.png"
+    "main.js": "/ipadrrestracker/static/js/main.b867071c.chunk.js",
+    "main.js.map": "/ipadrrestracker/static/js/main.b867071c.chunk.js.map",
+    "runtime-main.js": "/ipadrrestracker/static/js/runtime-main.07b037a6.js",
+    "runtime-main.js.map": "/ipadrrestracker/static/js/runtime-main.07b037a6.js.map",
+    "static/js/2.fd0cabd7.chunk.js": "/ipadrrestracker/static/js/2.fd0cabd7.chunk.js",
+    "static/js/2.fd0cabd7.chunk.js.map": "/ipadrrestracker/static/js/2.fd0cabd7.chunk.js.map",
+    "index.html": "/ipadrrestracker/index.html",
+    "static/js/2.fd0cabd7.chunk.js.LICENSE.txt": "/ipadrrestracker/static/js/2.fd0cabd7.chunk.js.LICENSE.txt",
+    "static/media/pattern-bg.a60a3c85.png": "/ipadrrestracker/static/media/pattern-bg.a60a3c85.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.4660a214.js",
-    "static/js/2.a45d6761.chunk.js",
-    "static/js/main.33749084.chunk.js"
+    "static/js/runtime-main.07b037a6.js",
+    "static/js/2.fd0cabd7.chunk.js",
+    "static/js/main.b867071c.chunk.js"
   ]
 }
