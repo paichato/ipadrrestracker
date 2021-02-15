@@ -11,6 +11,7 @@ require('dotenv').config();
 
 const API_KEY=process.env.REACT_APP_GOOGLE_API_KEY;
 export const IPFY_API_KEY=process.env.REACT_APP_IPFY_API_KEY;
+console.log(IPFY_API_KEY);
 
 const ipData={
     ip: String,
@@ -23,6 +24,7 @@ const ipData={
 function Homepage({ip, setip, vis, setvis}) {
 const [ips,setips]=useState([]);
 const [input,setinput]=useState();
+const [location, setlocation] = useState([]);
 
 // useEffect(() => {
 //     if(ips.status==="fail"){
@@ -53,16 +55,18 @@ const [input,setinput]=useState();
         if(event){
             event.preventDefault();
            
-            const response=await api.get(`/${ip}?fields=country,countryCode,city,offset,isp,query,lat,lon,regionName,status`);
+            // const response=await api.get(`/${ip}?fields=country,countryCode,city,offset,isp,query,lat,lon,regionName,status`);
+            const response=await api.get(`domain=${ip}`);
             const allip=response.data;
             setips(allip);
             setinput(ip);
             setip("");
             setvis(true);
+            setlocation(response.data.location);
             console.log(ip);
             console.log(vis);
             console.log(response.data);
-            console.log(ips.lat);
+            // console.log(ips.location.city);
             
         } 
     
@@ -103,11 +107,12 @@ const [input,setinput]=useState();
             
                 <span className="corner">
                     <h3>IP ADDRESS</h3>
-                    <h2>{ips.status==="success"?ips.query:"Write valid ip"}</h2>
+                    <h2>{ips?ips.ip:"Write valid ip"}</h2>
                 </span>
                 <span>
                     <h3>LOCATION</h3>
-                    <h2>{ips.status==="success"?(ips.city+","+ips.countryCode):"-"}</h2>
+                    <h2>{location.city+", "+location.country}</h2>
+                    {/* <h2>{ips?(ips.location['city']+","+ips.countryCode):"-"}</h2> */}
                 </span>
                 <span>
                     <h3>TIMEZONE</h3>
