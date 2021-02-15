@@ -126,14 +126,17 @@ form{
         flex-direction:column;
         margin-top:30vh;
         width:35vw;
+        padding:0;
+        text-align:center;
+        
         
         
     }
     @media (max-width:600px){
-         width:70vw;
+         width:50vw;
          height:40vh; 
          padding:0;
-         margin-top:150px;
+         margin-top:30vh;
          justify-content:center;
          align-items:center;
          text-align:center;
@@ -141,6 +144,10 @@ form{
 
          
          
+    }
+    @media (max-width:555px){
+        width:70vw;
+
     }
 
     h1{
@@ -203,7 +210,7 @@ form{
         }
         @media (max-width:1000px){
             border:none;
-            /* width:35vw; */
+            width:35vw;
            
         }
         @media (max-width:600px){

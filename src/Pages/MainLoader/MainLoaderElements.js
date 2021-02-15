@@ -8,6 +8,7 @@ display:grid;
 place-items:center;
 width:100vw;
 height:100vh;
+font-family:'Rubik', sans-serif;
 
 
 div{
