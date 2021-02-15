@@ -6,13 +6,14 @@ export const BgContainer=styled.div`
 z-index:1;
 
 img{
-    min-width:100%;
-    /* height:100%; */
+    
+    width:100vw;
     display:flex;
     justify-content:center;
     align-items:center;
+    object-fit:cover;
     
-    /* background:white url(bg) no-repeat fixed center; */
+    
 }
 
 iframe{
