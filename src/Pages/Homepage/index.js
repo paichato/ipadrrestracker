@@ -62,7 +62,7 @@ const [location, setlocation] = useState([]);
             setinput(ip);
             setip("");
             setvis(true);
-            setlocation(response.data.location);
+            setlocation(allip.location);
             console.log(ip);
             console.log(vis);
             console.log(response.data);
@@ -116,7 +116,8 @@ const [location, setlocation] = useState([]);
                 </span>
                 <span>
                     <h3>TIMEZONE</h3>
-                    <h2>{ips.status==="success"?("UTC"+" "+Math.round((ips.offset)/3600)+":00"):"-"}</h2>
+                    <h2>{"UTC"+" "+location.timezone}</h2>
+                    {/* <h2>{ips.status==="success"?("UTC"+" "+Math.round((ips.offset)/3600)+":00"):"-"}</h2> */}
                 </span>
                 <span >
                     <h3>ISP</h3>
