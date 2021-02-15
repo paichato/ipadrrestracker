@@ -104,7 +104,7 @@ const [isLoading, setisLoading] = useState(false);
   height="650"
   frameBorder="0" style={{border:0}}
   src={`https://www.google.com/maps/embed/v1/place?key=${API_KEY}
-  &q=${ips.city}+","+${ips.regionName}+","+${ips.country}`} allowFullScreen>
+  &q=${location.city}+","+${location.region}+","+${location.country}`} allowFullScreen> {/*&center=${location.lat}+","+${location.lng}*/}
 </iframe>
 
             
