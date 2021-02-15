@@ -64,7 +64,7 @@ const [isLoading, setisLoading] = useState(false);
             // const response=await api.get(`/${ip}?fields=country,countryCode,city,offset,isp,query,lat,lon,regionName,status`);
             
             //fetching data through axios(api) and stoping the loading mothion
-            const response=await api.get(`domain=${ip}`).then(setisLoading(false));
+            const response=await api.get(`v1?apiKey=${IPFY_API_KEY}&domain=${ip}`).then(setisLoading(false));
             
             // allip will receive all response data
             const allip=response.data;
@@ -122,8 +122,8 @@ const [isLoading, setisLoading] = useState(false);
                     
                  
             </div>
-            <div className="divData">
-            <h1 style={{color:"red",fontSize:"11px" }}>Write IP. Ex: 8.8.8.8</h1> {/* continua */}
+           <div className="divData">
+           
             
                 <span className="corner">
                     <h3>IP ADDRESS</h3>
@@ -145,7 +145,7 @@ const [isLoading, setisLoading] = useState(false);
                     {/* <h2>{ips.status==="success"?ips.isp:"-"}</h2> */}
                 </span>
             </div>
-            <Loader/>
+            
 
         </Container>
 

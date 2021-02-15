@@ -28,8 +28,8 @@ export const LoaderContainer=styled.section`
 
     border:0 solid transparent;
     border-radius: 50%;
-    width:150px;
-    height:150px;
+    width:50px;
+    height:50px;
     top: calc(50vh - 75px);
     left: calc(50vw - 75px);
 

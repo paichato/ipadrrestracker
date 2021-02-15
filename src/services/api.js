@@ -4,7 +4,8 @@ import axios from 'axios';
 const IPFY_API_KEY=process.env.REACT_APP_IPFY_API_KEY;
 
 const api=axios.create({
-    baseURL: `https://geo.ipify.org/api/v1?apiKey=${IPFY_API_KEY}&`
+    baseURL: `https://geo.ipify.org/api/`
+    // baseURL: `https://geo.ipify.org/api/v1?apiKey=${IPFY_API_KEY}`
 })
 
 export default api;
