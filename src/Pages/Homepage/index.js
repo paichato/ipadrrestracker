@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import bg from '../../Assets/pattern-bg.png';
 import api from '../../services/api';
-import { abz} from '../../myapi';
+import {Toast, ToastContainer} from 'react-toastify';
 
 import { Arrow, BgContainer, Container, AlertS } from './HomepageElements';
 import Loader from '../Loader';
@@ -14,13 +14,6 @@ const API_KEY=process.env.REACT_APP_GOOGLE_API_KEY;
 export const IPFY_API_KEY=process.env.REACT_APP_IPFY_API_KEY;
 console.log(IPFY_API_KEY);
 
-const ipData={
-    ip: String,
-    city: String,
-    countrycode:String,
-    timezone:String,
-    isp:String
-}
 
 function Homepage({ip, setip, vis, setvis}) {
 const [ips,setips]=useState([]);
@@ -29,12 +22,7 @@ const [location, setlocation] = useState([]);
 const [isp, setisp] = useState([]);
 const [isLoading, setisLoading] = useState(false);
 
-// useEffect(() => {
-//     if(ips.status==="fail"){
-//         alert("write a valid ip")
-//     }
-    
-// }, [])
+
 
 
 
