@@ -7,7 +7,7 @@ export const LoaderContainer=styled.section`
 
 
 .loaderbg{
-    position:fixed;
+    /* position:fixed; */
     top:0;
     left:0;
     bottom:0;

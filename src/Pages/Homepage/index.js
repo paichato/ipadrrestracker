@@ -145,6 +145,7 @@ const [isLoading, setisLoading] = useState(false);
                     {/* <h2>{ips.status==="success"?ips.isp:"-"}</h2> */}
                 </span>
             </div>
+            {isLoading?<Loader/>:null}
             
 
         </Container>
