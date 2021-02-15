@@ -56,9 +56,11 @@ let allip;
             // const response=await api.get(`v1?apiKey=${IPFY_API_KEY}&domain=${ip}`).then(setisLoading(false));
             // const response=await api.get(`v1?apiKey=${IPFY_API_KEY}&domain=${ip}`);
             const response=await api.get(`v1?apiKey=${IPFY_API_KEY}&domain=${ip}`).then(function(response){
-                 allip=response.data;
+                // allip will receive all response data 
+                allip=response.data;
                  //setting response data to our state->ips
                 setips(allip);
+                //stting location and isp to different states because of type error
                 setlocation(allip.location);
                 setisp(allip.isp);
 
@@ -97,7 +99,7 @@ let allip;
                 }
             });
             
-            // allip will receive all response data
+            
             
             //Set false because fecthing was finished
             setisLoading(false)
@@ -114,7 +116,7 @@ let allip;
             setip("");
             setvis(true);
 
-            //stting location and isp to different states because of type error
+            
             
             console.log(ip);
             // console.log(vis);
