@@ -64,10 +64,13 @@ const [isLoading, setisLoading] = useState(false);
             // const response=await api.get(`/${ip}?fields=country,countryCode,city,offset,isp,query,lat,lon,regionName,status`);
             
             //fetching data through axios(api) and stoping the loading mothion
-            const response=await api.get(`v1?apiKey=${IPFY_API_KEY}&domain=${ip}`).then(setisLoading(false));
+            // const response=await api.get(`v1?apiKey=${IPFY_API_KEY}&domain=${ip}`).then(setisLoading(false));
+            const response=await api.get(`v1?apiKey=${IPFY_API_KEY}&domain=${ip}`);
             
             // allip will receive all response data
             const allip=response.data;
+            //Set false because fecthing was finished
+            setisLoading(false)
             
             
             //setting response data to our state->ips
@@ -131,17 +134,17 @@ const [isLoading, setisLoading] = useState(false);
                 </span>
                 <span>
                     <h3>LOCATION</h3>
-                    <h2>{isLoading?"-":(location.city+", "+location.country)}</h2>
+                    <h2>{isLoading?"Loading...":(location.city+", "+location.country)}</h2>
                     {/* <h2>{ips?(ips.location['city']+","+ips.countryCode):"-"}</h2> */}
                 </span>
                 <span>
                     <h3>TIMEZONE</h3>
-                    <h2>{isLoading?"-":("UTC"+" "+location.timezone)}</h2>
+                    <h2>{isLoading?"Loading..":("UTC"+" "+location.timezone)}</h2>
                     {/* <h2>{ips.status==="success"?("UTC"+" "+Math.round((ips.offset)/3600)+":00"):"-"}</h2> */}
                 </span>
                 <span >
                     <h3>ISP</h3>
-                    <h2>{isLoading?"-":isp}</h2>
+                    <h2>{isLoading?"Loading..":isp}</h2>
                     {/* <h2>{ips.status==="success"?ips.isp:"-"}</h2> */}
                 </span>
             </div>
