@@ -1,18 +1,23 @@
 {
   "files": {
-    "main.js": "/ipadrrestracker/static/js/main.9b697d76.chunk.js",
-    "main.js.map": "/ipadrrestracker/static/js/main.9b697d76.chunk.js.map",
+    "main.js": "/ipadrrestracker/static/js/main.bae567c3.chunk.js",
+    "main.js.map": "/ipadrrestracker/static/js/main.bae567c3.chunk.js.map",
     "runtime-main.js": "/ipadrrestracker/static/js/runtime-main.07b037a6.js",
     "runtime-main.js.map": "/ipadrrestracker/static/js/runtime-main.07b037a6.js.map",
-    "static/js/2.fd0cabd7.chunk.js": "/ipadrrestracker/static/js/2.fd0cabd7.chunk.js",
-    "static/js/2.fd0cabd7.chunk.js.map": "/ipadrrestracker/static/js/2.fd0cabd7.chunk.js.map",
+    "static/css/2.ffda3d49.chunk.css": "/ipadrrestracker/static/css/2.ffda3d49.chunk.css",
+    "static/js/2.1b2949d3.chunk.js": "/ipadrrestracker/static/js/2.1b2949d3.chunk.js",
+    "static/js/2.1b2949d3.chunk.js.map": "/ipadrrestracker/static/js/2.1b2949d3.chunk.js.map",
     "index.html": "/ipadrrestracker/index.html",
-    "static/js/2.fd0cabd7.chunk.js.LICENSE.txt": "/ipadrrestracker/static/js/2.fd0cabd7.chunk.js.LICENSE.txt",
-    "static/media/pattern-bg.a60a3c85.png": "/ipadrrestracker/static/media/pattern-bg.a60a3c85.png"
+    "static/css/2.ffda3d49.chunk.css.map": "/ipadrrestracker/static/css/2.ffda3d49.chunk.css.map",
+    "static/js/2.1b2949d3.chunk.js.LICENSE.txt": "/ipadrrestracker/static/js/2.1b2949d3.chunk.js.LICENSE.txt",
+    "static/media/loader-bussola2.b3623599.gif": "/ipadrrestracker/static/media/loader-bussola2.b3623599.gif",
+    "static/media/pattern-bg.a60a3c85.png": "/ipadrrestracker/static/media/pattern-bg.a60a3c85.png",
+    "static/media/u.cd712fa2.gif": "/ipadrrestracker/static/media/u.cd712fa2.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.07b037a6.js",
-    "static/js/2.fd0cabd7.chunk.js",
-    "static/js/main.9b697d76.chunk.js"
+    "static/css/2.ffda3d49.chunk.css",
+    "static/js/2.1b2949d3.chunk.js",
+    "static/js/main.bae567c3.chunk.js"
   ]
 }
