@@ -1,14 +1,20 @@
 import React from 'react'
-import loaderm from '../../Assets/loader-bussola.gif'
-import { GitIcon } from './MainLoaderElements'
+import loaderm from '../../Assets/loader-bussola2.gif'
+import { GitIcon, MainLoaderContainer } from './MainLoaderElements'
+import reactDOM from 'react-dom';
+
 
 function MainLoader() {
-    return ReactDOM.createPortal(
+    return reactDOM.createPortal(
         <>
         <MainLoaderContainer>
-          
-                <img src={loaderm}/>
-                <div id="table">
+        <div id="table">
+        <h1>Loading...</h1>
+                <span>
+                    <img src={loaderm}/>
+                    
+                </span>
+                
                     <a>
                         <GitIcon/>
                         <p>Made by paichato</p>
