@@ -130,17 +130,17 @@ const [isLoading, setisLoading] = useState(false);
                 </span>
                 <span>
                     <h3>LOCATION</h3>
-                    <h2>{location.city+", "+location.country}</h2>
+                    <h2>{isLoading?"-":(location.city+", "+location.country)}</h2>
                     {/* <h2>{ips?(ips.location['city']+","+ips.countryCode):"-"}</h2> */}
                 </span>
                 <span>
                     <h3>TIMEZONE</h3>
-                    <h2>{"UTC"+" "+location.timezone}</h2>
+                    <h2>{isLoading?"-":("UTC"+" "+location.timezone)}</h2>
                     {/* <h2>{ips.status==="success"?("UTC"+" "+Math.round((ips.offset)/3600)+":00"):"-"}</h2> */}
                 </span>
                 <span >
                     <h3>ISP</h3>
-                    <h2>{isp}</h2>
+                    <h2>{isLoading?"-":isp}</h2>
                     {/* <h2>{ips.status==="success"?ips.isp:"-"}</h2> */}
                 </span>
             </div>
