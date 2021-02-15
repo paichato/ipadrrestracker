@@ -2,12 +2,11 @@
 A web app that tracks IP addresses or domains by consuming IPFY-API and Google Maps API.
 
 ## What the app looks like/ Aparencia da aplicacao 🙈
- 
-<div >
-  <img src="https://github.com/paichato/ipadrrestracker/blob/main/screenshots/preview1.PNG" width="100" /></br>
-  <img src="https://github.com/paichato/ipadrrestracker/blob/main/screenshots/preview2.PNG" width="100" /> 
-  
-</div>
+
+ ![banner](https://github.com/paichato/ipadrrestracker/blob/main/screenshots/preview1.PNG)
+ ![banner](https://github.com/paichato/ipadrrestracker/blob/main/screenshots/preview2.PNG)
+
+
 --- 
 
 
