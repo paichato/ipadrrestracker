@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import bg from '../../Assets/pattern-bg.png';
 import api from '../../services/api';
-import {toast, Toast, ToastContainer} from 'react-toastify';
+import {toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { Arrow, BgContainer, Container, AlertS } from './HomepageElements';
+import { Arrow, BgContainer, Container} from './HomepageElements';
 import Loader from '../Loader';
 
 require('dotenv').config();
