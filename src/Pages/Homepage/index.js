@@ -5,6 +5,7 @@ import api from '../../services/api';
 import { abz} from '../../myapi';
 
 import { Arrow, BgContainer, Container, AlertS } from './HomepageElements';
+import Loader from '../Loader';
 
 require('dotenv').config();
 
@@ -144,6 +145,7 @@ const [isLoading, setisLoading] = useState(false);
                     {/* <h2>{ips.status==="success"?ips.isp:"-"}</h2> */}
                 </span>
             </div>
+            <Loader/>
 
         </Container>
 
