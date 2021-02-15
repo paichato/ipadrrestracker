@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 import bg from '../../Assets/pattern-bg.png';
 import api from '../../services/api';
-import {Toast, ToastContainer} from 'react-toastify';
+import {toast, Toast, ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { Arrow, BgContainer, Container, AlertS } from './HomepageElements';
 import Loader from '../Loader';
@@ -59,6 +60,15 @@ const [isLoading, setisLoading] = useState(false);
             const allip=response.data;
             //Set false because fecthing was finished
             setisLoading(false)
+            toast.success('✅Sucessfuly Loaded', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
             
             
             //setting response data to our state->ips
@@ -138,7 +148,17 @@ const [isLoading, setisLoading] = useState(false);
             </div>
             {isLoading?<Loader/>:null}
             
-
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                /> {/*Toast Container*/}
         </Container>
 
         </BgContainer>
