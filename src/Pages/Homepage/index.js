@@ -25,6 +25,8 @@ function Homepage({ip, setip, vis, setvis}) {
 const [ips,setips]=useState([]);
 const [input,setinput]=useState();
 const [location, setlocation] = useState([]);
+const [isp, setisp] = useState([]);
+const [isLoading, setisLoading] = useState(false);
 
 // useEffect(() => {
 //     if(ips.status==="fail"){
@@ -41,12 +43,15 @@ const [location, setlocation] = useState([]);
 
   
     const handleIpData=e=>{
-       
+        if(e){
+        setisLoading(true);
             setip(e.target.value);
             console.log(ip);
+            console.log(isLoading);
             if(ip===""){
                 setvis(false);
             }
+        }
         
     }
   
@@ -56,13 +61,27 @@ const [location, setlocation] = useState([]);
             event.preventDefault();
            
             // const response=await api.get(`/${ip}?fields=country,countryCode,city,offset,isp,query,lat,lon,regionName,status`);
-            const response=await api.get(`domain=${ip}`);
+            
+            //fetching data through axios(api) and stoping the loading mothion
+            const response=await api.get(`domain=${ip}`).then(setisLoading(false));
+            
+            // allip will receive all response data
             const allip=response.data;
+            
+            
+            //setting response data to our state->ips
             setips(allip);
+            
+            //setting our render field of ip with current ip
             setinput(ip);
+            
+            //reseting input field
             setip("");
             setvis(true);
+
+            //stting location and isp to different states because of type error
             setlocation(allip.location);
+            setisp(allip.isp);
             console.log(ip);
             console.log(vis);
             console.log(response.data);
@@ -107,7 +126,7 @@ const [location, setlocation] = useState([]);
             
                 <span className="corner">
                     <h3>IP ADDRESS</h3>
-                    <h2>{ips?ips.ip:"Write valid ip"}</h2>
+                    <h2>{isLoading?"Write valid ip":ips.ip}</h2>
                 </span>
                 <span>
                     <h3>LOCATION</h3>
@@ -121,7 +140,8 @@ const [location, setlocation] = useState([]);
                 </span>
                 <span >
                     <h3>ISP</h3>
-                    <h2>{ips.status==="success"?ips.isp:"-"}</h2>
+                    <h2>{isp}</h2>
+                    {/* <h2>{ips.status==="success"?ips.isp:"-"}</h2> */}
                 </span>
             </div>
 
