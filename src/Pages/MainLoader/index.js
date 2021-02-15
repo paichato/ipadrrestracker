@@ -1,11 +1,13 @@
 import React from 'react'
+import loaderm from '../../Assets/loader-bussola.gif'
 
 function MainLoader() {
     return (
         <>
         <MainLoaderContainer>
-            <h1></h1>
-            <hr/>
+            <div id="table">
+                <img src={}/>
+            </div>
         </MainLoaderContainer>
             
         </>
