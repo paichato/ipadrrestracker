@@ -57,7 +57,20 @@ let allip;
             // const response=await api.get(`v1?apiKey=${IPFY_API_KEY}&domain=${ip}`);
             const response=await api.get(`v1?apiKey=${IPFY_API_KEY}&domain=${ip}`).then(function(response){
                  allip=response.data;
+                 //setting response data to our state->ips
                 setips(allip);
+                setlocation(allip.location);
+                setisp(allip.isp);
+
+                toast.success('✅Sucessfuly Loaded', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    });
 
             })
             .catch(function (error){
@@ -88,18 +101,10 @@ let allip;
             
             //Set false because fecthing was finished
             setisLoading(false)
-            toast.success('✅Sucessfuly Loaded', {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                });
             
             
-            //setting response data to our state->ips
+            
+            
             
             
             //setting our render field of ip with current ip
@@ -110,8 +115,7 @@ let allip;
             setvis(true);
 
             //stting location and isp to different states because of type error
-            setlocation(allip.location);
-            setisp(allip.isp);
+            
             console.log(ip);
             // console.log(vis);
             // console.log(response.data);
