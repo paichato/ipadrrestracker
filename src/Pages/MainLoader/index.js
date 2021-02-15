@@ -9,17 +9,15 @@ function MainLoader() {
         <>
         <MainLoaderContainer>
         <div id="table">
-        <h1>Loading...</h1>
-                <span>
-                    <img src={loaderm}/>
-                    
-                </span>
-                
-                    <a>
-                        <GitIcon/>
-                        <p>Made by paichato</p>
-                    </a>
-                </div>
+        
+               
+            <img src={loaderm}/>
+            <h1>Loading...</h1>
+            <a href="https://github.com/paichato/ipadrrestracker" target="#blank">
+                <GitIcon/>
+                <p>Made by paichato</p>
+            </a>
+        </div>
         </MainLoaderContainer>
             
         </>, document.getElementById('loader')

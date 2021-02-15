@@ -39,6 +39,7 @@ const expired=useExpired(3000);
     
       <GlobalStyle/>
       </>):<MainLoader/>}
+      <MainLoader/>
     </>
   );
 }

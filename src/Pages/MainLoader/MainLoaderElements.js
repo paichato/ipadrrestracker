@@ -16,13 +16,13 @@ div{
 flex-direction:column;
 align-items:center;
 place-items:center;
+
 }
 
 
 h1{
-    position:absolute;
-    margin-top:400px;
-    margin-left:50px;
+    
+   
     color:#000000e0;
 }
 
@@ -37,11 +37,13 @@ margin-top:200px; */
 a{
     text-decoration:none;
     display:flex;
-    justify-content:center;
+    justify-content:flex-end;
     align-items:center;
-    margin-top:800px;
+    /* margin-top:800px; */
     color:#000000e0;
     fill:#000000e0;
+    position: absolute;
+    margin-top: 55vh;
     cursor: pointer;
 
     &:hover{
@@ -53,10 +55,10 @@ a{
 }
 
 img{
-    position:absolute;
-    margin-top:600px;
+    /* position:absolute; */
+    /* margin-top:25vh;
     
-    margin-left:50px;
+    margin-left:50px; */
     /* margin-top:200px; */
     width:200px;
     height:200px;
