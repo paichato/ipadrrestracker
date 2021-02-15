@@ -136,24 +136,24 @@ let allip;
             
             {/* Google map without icon */}
             <iframe
-  width="1940"
-  height="650"
-  frameBorder="0" style={{border:0}}
-  src={`https://www.google.com/maps/embed/v1/place?key=${API_KEY}
-  &q=${location.city}+","+${location.region}+","+${location.country}`} allowFullScreen> {/*&center=${location.lat}+","+${location.lng}*/}
-</iframe>
+                width="1940"
+                height="650"
+                frameBorder="0" style={{border:0}}
+                src={`https://www.google.com/maps/embed/v1/place?key=${API_KEY}
+                &q=${location.city}+","+${location.region}+","+${location.country}`} allowFullScreen> {/*&center=${location.lat}+","+${location.lng}*/}
+            </iframe>
 
             
             
             <Container>
             <h1>IP Address Tracker</h1>
             <div className="divButton">
-                    <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
                     <input onChange={handleIpData} value={ip} vis={vis}  placeholder="press enter to use your ip"/>
                     <button type="submit"   ><Arrow/></button>
                     
                     
-                    </form>
+                </form>
                     
                  
             </div>
