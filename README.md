@@ -49,7 +49,13 @@ Users should be able to:
 ---|---|---
 ipfy-api|axios|react-toastify
 
+## Why
+This project is part of my personall portfolio. It was built based on [Frontend Mentor](https://www.frontendmentor.io/slack)design.<br/>
+Email: tsenane14@gmail.com | Contact me at [Linkedin](https://www.linkedin.com/in/marlon-d-jesus-6874271ab/) 
+---- | ----
 
+
+UI/UX credits: [Frontend Mentor](https://www.frontendmentor.io/slack)
 
 
 ## Future Features 🎲
