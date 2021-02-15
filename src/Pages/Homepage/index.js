@@ -45,7 +45,7 @@ const [isLoading, setisLoading] = useState(false);
         
     }
   
-
+let allip;
   async  function handleSubmit(event){
         if(event){
             event.preventDefault();
@@ -54,10 +54,38 @@ const [isLoading, setisLoading] = useState(false);
             
             //fetching data through axios(api) and stoping the loading mothion
             // const response=await api.get(`v1?apiKey=${IPFY_API_KEY}&domain=${ip}`).then(setisLoading(false));
-            const response=await api.get(`v1?apiKey=${IPFY_API_KEY}&domain=${ip}`);
+            // const response=await api.get(`v1?apiKey=${IPFY_API_KEY}&domain=${ip}`);
+            const response=await api.get(`v1?apiKey=${IPFY_API_KEY}&domain=${ip}`).then(function(response){
+                 allip=response.data;
+                setips(allip);
+
+            })
+            .catch(function (error){
+                if (error.response){
+                    toast.warn('⚠ Invalid address!', {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        });
+                } else if(error.request){
+                    toast.error('❌ Something went wrong! Try again later!', {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        });
+                }
+            });
             
             // allip will receive all response data
-            const allip=response.data;
+            
             //Set false because fecthing was finished
             setisLoading(false)
             toast.success('✅Sucessfuly Loaded', {
@@ -72,7 +100,7 @@ const [isLoading, setisLoading] = useState(false);
             
             
             //setting response data to our state->ips
-            setips(allip);
+            
             
             //setting our render field of ip with current ip
             setinput(ip);
@@ -85,8 +113,8 @@ const [isLoading, setisLoading] = useState(false);
             setlocation(allip.location);
             setisp(allip.isp);
             console.log(ip);
-            console.log(vis);
-            console.log(response.data);
+            // console.log(vis);
+            // console.log(response.data);
             // console.log(ips.location.city);
             
         } 
